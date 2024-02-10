@@ -1,0 +1,133 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LINQ_Datatable_Exercise" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2065" sap2010:WorkflowViewState.IdRef="LINQ_Datatable_Exercise_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Use case:&#xD;&#xA;&#xD;&#xA;You have a DataTable containing employee data, and you need to use LINQ to filter and analyze the data. &#xD;&#xA;&#xD;&#xA;Here are the high-level steps to building automation: &#xD;&#xA;&#xD;&#xA;1. Initialize DataTable with employee data.&#xD;&#xA;2. Filter the data using LINQ&#xD;&#xA;3. Calculate the average salary.&#xD;&#xA;4. Display the results.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Let's break it down:&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;If(&#xD;&#xA;    EmployeeDataDT.AsEnumerable.Where(Function(row) Convert.ToDouble(row(&quot;Salary&quot;)) &gt; 50000).Count &gt; 0,&#xD;&#xA;    EmployeeDataDT.AsEnumerable.Where(Function(row) Convert.ToDouble(row(&quot;Salary&quot;)) &gt; 50000).CopyToDataTable,&#xD;&#xA;    EmployeeDataDT.Clone&#xD;&#xA;)&#xD;&#xA;&#xD;&#xA;This query can be explained step by step:&#xD;&#xA;&#xD;&#xA;EmployeeDataDT.AsEnumerable: This converts the DataTable EmployeeDataDT into an IEnumerable collection to use LINQ queries on it.&#xD;&#xA;&#xD;&#xA;.Where(Function(row) Convert.ToDouble(row(&quot;Salary&quot;)) &gt; 50000): This filters the rows in the DataTable where the &quot;Salary&quot; column value, converted to a double, is greater than 50000.&#xD;&#xA;&#xD;&#xA;.Count &gt; 0: Checks if the count of filtered rows is greater than zero. This essentially checks if there are any rows in the DataTable that satisfy the condition of having a salary greater than 50000.&#xD;&#xA;&#xD;&#xA;The If statement evaluates the condition:&#xD;&#xA;&#xD;&#xA;If the count of filtered rows is greater than zero (True), it executes the true condition:&#xD;&#xA;&#xD;&#xA;EmployeeDataDT.AsEnumerable.Where(Function(row) Convert.ToDouble(row(&quot;Salary&quot;)) &gt; 50000).CopyToDataTable: This takes the filtered rows and creates a new DataTable (CopyToDataTable) containing only those rows that meet the salary condition.&#xD;&#xA;&#xD;&#xA;If the count of filtered rows is zero (False), it executes the false condition:&#xD;&#xA;EmployeeDataDT.Clone: This creates a shallow copy of the original DataTable EmployeeDataDT. This means it copies the structure (columns, constraints, etc.) but does not copy the data itself.&#xD;&#xA;&#xD;&#xA;This LINQ query essentially checks if there are any employees in the EmployeeDataDT DataTable with a salary greater than 50000. If there are, it creates a new DataTable containing only those rows; otherwise, it creates a clone of the original DataTable structure without any data." DisplayName="LINQ_Datatable_Exercise" sap:VirtualizedContainerService.HintSize="496,2000" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="EmployeeDataDT" />
+      <Variable x:TypeArguments="sd:DataTable" Name="FilteredDataDT" />
+      <Variable x:TypeArguments="x:String" Name="FilteredDataSTR" />
+      <Variable x:TypeArguments="x:Double" Name="AverageSalary" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;Start: LINQ_Datatable_Exercise&quot;]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[EmployeeDataDT]" DisplayName="Read Range Workbook - Employee Data DT" sap:VirtualizedContainerService.HintSize="434,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Input\EmployeeData.xlsx" />
+    <Assign sap2010:Annotation.AnnotationText="Note: The expression contains the Filtering with the LINQ plus the Verification if the number of returned rows is greater than  0. Without this verification, in cases when the number of returned rows from the filtering  is 0, CopyToDatatable will throw an exception." DisplayName="Assign Filtered Employee DataTable Using LINQ" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="sd:DataTable">[FilteredDataDT]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="sd:DataTable">[If(EmployeeDataDT.AsEnumerable.Where(Function(row) Convert.ToDouble(row("Salary"))&gt; 50000).Count &gt;0,EmployeeDataDT.AsEnumerable.Where(Function(row) Convert.ToDouble(row("Salary"))&gt; 50000).CopyToDataTable, EmployeeDataDT.Clone)]</InArgument>
+      </Assign.Value>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </Assign>
+    <ui:OutputDataTable DataTable="[FilteredDataDT]" DisplayName="Output Data Table - FilteredDataDT" sap:VirtualizedContainerService.HintSize="434,80" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[FilteredDataSTR]" />
+    <ui:LogMessage DisplayName="Log Message FilteredDataSTR" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[FilteredDataSTR]" />
+    <Assign DisplayName="Assign AverageSalary UsingLINQ Query " sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Double">[AverageSalary]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Double">[FilteredDataDT.AsEnumerable.Average(Function(row) Convert.ToDouble(row("Salary")))]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message AverageSalary" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[AverageSalary.ToString]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[&quot;End: LINQ_Datatable_Exercise&quot;]" />
+  </Sequence>
+</Activity>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Customers>
+<Customer ID="1">
+<Name>Daimler</Name>
+<City>
+<CityName>Berlin</CityName>
+<Zip>12681</Zip>
+</City>
+</Customer>
+<Customer ID="2">
+<Name>BMW</Name>
+<City>
+<CityName>Munich</CityName>
+<Zip>80687</Zip>
+</City>
+</Customer>
+<Customer ID="3">
+<Name>Audi</Name>
+<City>
+<CityName>Ingolstadt</CityName>
+<Zip>85057</Zip>
+</City>
+</Customer>
+<Customer ID="4">
+<Name>Volkswagen</Name>
+<City>
+<CityName>Wolfsburg</CityName>
+<Zip>38440</Zip>
+</City>
+</Customer>
+<Customer ID="5">
+<Name>Porsche</Name>
+<City>
+<CityName>Stuttgart</CityName>
+<Zip>70435</Zip>
+</City>
+</Customer>
+</Customers>

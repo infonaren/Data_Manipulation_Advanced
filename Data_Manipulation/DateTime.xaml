@@ -1,0 +1,136 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="DateTime" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="654,2867" sap2010:WorkflowViewState.IdRef="DateTime_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Globalization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="DateTimeVar.Subtract(StartOfYear).TotalDays.ToString&#xA;&#xA;&#xA;&#xA;Everything looks good! At the time of the run, 108 days and a half have passed since the start of the year.&#xA;&#xA;&#xA;&#xA;If we subtract a later date from an earlier date, the result will be positive. If the order is switched, the result will be negative.  &#xA;&#xA;&#xA;&#xA;StartOfYear.Subtract(DateTimeVar).TotalDays.ToString &#xA;&#xA;&#xA;&#xA;Let’s hit run.&#xA;&#xA;&#xA;&#xA;We have the expected result.   &#xA;&#xA;&#xA;&#xA;If the order is not relevant and we just want to obtain a positive result, we can use the Math.Abs method to display the absolute value.  &#xA;&#xA;&#xA;&#xA;Math.Abs(StartOfYear.Subtract(DateTimeVar).TotalDays).ToString &#xA;&#xA;&#xA;&#xA;We’ll run the project to view the result, and here it is.  &#xA;&#xA;&#xA;&#xA;An alternative to Subtract is to just use minus between the two dates. Let’s click run!&#xA;&#xA;&#xA;&#xA;Math.Abs((StartOfYear-DateTimeVar).TotalDays).ToString &#xA;&#xA;&#xA;&#xA;And we got the same result. Everything looks good!  &#xA;&#xA;&#xA;&#xA;And this was it for our video on DateTime variables.&#xA;&#xA;&#xA;&#xA;For a quick recap: We can declare DateTime variables using the System.DateTime type and assign the current date by using the Now method. &#xA;&#xA;We can convert DateTime values to string by using the ToString method. We can use the DateTime.Parse method to convert string values to DateTime. &#xA;&#xA;We can use the DateTime.ParseExact method when we know exactly the formats in which we will receive the dates as string. &#xA;&#xA;The Add methods let us both add and subtract time when working with DateTime variables. &#xA;&#xA;To get the difference between two dates, we can use the Subtract method. Last, but not least, the Math.Abs method helps us get the absolute value for the difference between dates." DisplayName="DateTime" sap:VirtualizedContainerService.HintSize="496,2802" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="s:DateTime" Default="[Now]" Name="DateTimeVar" />
+      <Variable x:TypeArguments="s:DateTime" Name="DateTimeVar1" />
+      <Variable x:TypeArguments="s:DateTime" Name="StartOfYear">
+        <Variable.Default>
+          <VisualBasicValue x:TypeArguments="s:DateTime" ExpressionText="DateTime.Parse(&quot;01/01/2024&quot;)" />
+        </Variable.Default>
+      </Variable>
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Current Date And Time =&gt; Log Message" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[DateTimeVar.ToString]" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="If we want to convert the date to a certain string format, we can do so by specifying the desired format as an argument of the ToString method. Let's convert this date to the ISO 8601 format, which is a standardized international date format. Whenever doing this, we’ll make sure to use capital “M” for the month and lowercase “m” for the minutes. We’ll use lowercase “h” for 12-hour format and uppercase “H” for 24-hour format. “T” is a character that is used as a delimiter for the ISO format and “zzz” represents the time zone." DisplayName="ISO 8601 Date Format =&gt; Log Message" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Date as string: &quot; + DateTimeVar.ToString(&quot;yyyy-MM-ddThh:mm:sszzz&quot;)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <Assign DisplayName="Convert String To DateTime" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[DateTimeVar]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse("07/12/2023")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message DateTime 1" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Date as string: &quot; + DateTimeVar.ToString(&quot;yyyy-MM-ddThh:mm:sszzz&quot;)]" />
+    <Assign DisplayName="Convert String To DateTime =&gt; Throw an error" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:DateTime">[DateTimeVar]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:DateTime">[DateTime.Parse("12/07/2023")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message DateTime 2" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Date as string: &quot; + DateTimeVar.ToString(&quot;yyyy-MM-ddThh:mm:sszzz&quot;)]" />
+    <ui:LogMessage sap2010:Annotation.AnnotationText="For cases where we know exactly the format in which we will receive the date, we can use DateTime.ParseExact which takes two additional arguments: one for the expected format, and another one to specify a culture.&#xA;&#xA;DateTime.ParseExact(“16/04/2021”,”dd/MM/yyyy”, CultureInfo.InvariantCulture)" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,224" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[DateTime.ParseExact(&quot;16/04/2021&quot;,&quot;dd/MM/yyyy&quot;, CultureInfo.InvariantCulture)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:LogMessage sap2010:Annotation.AnnotationText="DateTime.ParseExact(“16/04/2021”,{”dd/MM/yyyy”, “dd.MM.yyy”}, CultureInfo.InvariantCulture, DateTimeStyles.None)&#xA;&#xA;In case we might receive our dates in more than one format, we can specify them as an array of strings like so. To use ParseExact like this, we need to also provide a fourth argument, DateTimeStyles, which provides additional information about the format of the provided date. A typical value to specify is one. Perfect!&#xA;&#xA;" DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,284" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[DateTime.ParseExact(&quot;16.04.2034&quot;,{&quot;dd-MM-yyyy&quot;, &quot;dd.MM.yyyy&quot;}, CultureInfo.InvariantCulture, DateTimeStyles.None)]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:LogMessage>
+    <ui:LogMessage DisplayName="Log Message Days Passed " sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Message="[Math.Abs(DateTimeVar.Subtract(StartOfYear).TotalDays).ToString]" />
+  </Sequence>
+</Activity>
