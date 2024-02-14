@@ -1,0 +1,139 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Invoke_Code_Exercise" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,1386" sap2010:WorkflowViewState.IdRef="Practice_Invoke_Code_Exercise_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Practice—Invoke Code &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Utilize the Invoke Code activity to calculate the time difference between two events captured in different time zones.&#xD;&#xA;&#xD;&#xA;Calculate the time difference&#xD;&#xA;&#xD;&#xA;In this exercise, you will use the Invoke Code activity to calculate the time difference between two events captured in different time zones. We'll use two starting assets:&#xD;&#xA;&#xD;&#xA;A project which contains two DateTime Objects (EventATime and EventBTime) with different values assigned to them and two String variables with the IDs of the time-zones (EventATimezone and EventBTimezone). The Timezone IDs that we used can be found by checking the Registry key HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones or by checking the return value of  TimeZoneInfo.GetSystemTimeZones() method." DisplayName="Practice_Invoke_Code_Exercise" sap:VirtualizedContainerService.HintSize="558,1321" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="TimeDifference" />
+      <Variable x:TypeArguments="x:String" Name="EventBTimezone" />
+      <Variable x:TypeArguments="s:DateTime" Name="EventBTime" />
+      <Variable x:TypeArguments="x:String" Name="EventATimezone" />
+      <Variable x:TypeArguments="s:DateTime" Name="EventATime" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="Sequence - Time Difference" sap:VirtualizedContainerService.HintSize="496,958" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Assign sap2010:Annotation.AnnotationText="2023-02-07 08:20:00" DisplayName="Assign Event A Time" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:DateTime">[EventATime]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:DateTime">[New DateTime(2023, 2, 7, 8, 20, 0)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign DisplayName="Assign Event A Timezone" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[EventATimezone]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Central Europe Standard Time</InArgument>
+        </Assign.Value>
+      </Assign>
+      <Assign sap2010:Annotation.AnnotationText="2023-02-07 12:45:00" DisplayName="Assign Event B Time" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="Assign_3">
+        <Assign.To>
+          <OutArgument x:TypeArguments="s:DateTime">[EventBTime]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="s:DateTime">[New DateTime(2023, 2, 7, 12, 45, 0)]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <Assign DisplayName="Assign Event B Timezone" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[EventBTimezone]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">Eastern Standard Time</InArgument>
+        </Assign.Value>
+      </Assign>
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="// We can find out the list of supported Time Zone IDs from the Registry at&#xD;&#xA;// HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones&#xD;&#xA;//Or by using the TimeZoneInfo.GetSystemTimeZones() method.&#xD;&#xA;&#xD;&#xA;TimeZoneInfo TimeZoneInfoA = TimeZoneInfo.FindSystemTimeZoneById(TimeZoneA);&#xD;&#xA;TimeZoneInfo TimeZoneInfoB = TimeZoneInfo.FindSystemTimeZoneById(TimeZoneB);&#xD;&#xA;&#xD;&#xA;// Convert the time of the Event A to the timezone of Event B&#xD;&#xA;DateTime EventATimeInTimezoneB = TimeZoneInfo.ConvertTime(EventATime, TimeZoneInfoA, TimeZoneInfoB);&#xD;&#xA;&#xD;&#xA;// Compute the time difference between the two events&#xD;&#xA;TimeSpan timeDifference = EventBTime - EventATimeInTimezoneB;&#xD;&#xA;&#xD;&#xA;Result = timeDifference.ToString();&#xD;&#xA;&#xD;&#xA;// Iterate the list of time zone ids  using the TimeZoneInfo.GetSystemTimeZones() method which returns a collection of  time zone ids&#xD;&#xA;ReadOnlyCollection&lt;TimeZoneInfo&gt; timeZones = TimeZoneInfo.GetSystemTimeZones();&#xD;&#xA;&#xD;&#xA;foreach (TimeZoneInfo timeZone in timeZones)&#xD;&#xA;{&#xD;&#xA;    Console.WriteLine(timeZone.ToString());&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;//  Retrieve the ID of the local system's time zone and print the time zone name. &#xD;&#xA;string localTimeZoneId = TimeZoneInfo.Local.Id;&#xD;&#xA;Console.WriteLine(&quot;Local Time Zone ID: &quot; + localTimeZoneId);&#xD;&#xA;&#xD;&#xA;TimeZoneInfo myTimeZoneInformation = TimeZoneInfo.FindSystemTimeZoneById(localTimeZoneId);&#xD;&#xA;Console.WriteLine(&quot;Local Time Zone Name: &quot; + myTimeZoneInformation);" DisplayName="Invoke code - Compute Time Difference" sap:VirtualizedContainerService.HintSize="434,165" sap2010:WorkflowViewState.IdRef="InvokeCode_1" Language="CSharp">
+        <ui:InvokeCode.Arguments>
+          <InArgument x:TypeArguments="s:DateTime" x:Key="EventATime">[EventATime]</InArgument>
+          <InArgument x:TypeArguments="s:DateTime" x:Key="EventBTime">[EventBTime]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="TimeZoneA">[EventATimezone]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="TimeZoneB">[EventBTimezone]</InArgument>
+          <OutArgument x:TypeArguments="x:String" x:Key="Result">[TimeDifference]</OutArgument>
+        </ui:InvokeCode.Arguments>
+      </ui:InvokeCode>
+      <ui:LogMessage DisplayName="Log Message - Time Difference" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[TimeDifference]" />
+    </Sequence>
+  </Sequence>
+</Activity>
