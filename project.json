@@ -1,10 +1,11 @@
 {
-  "name": "Advanced_Data_Manipulation",
+  "name": "UiADP_AUtomate_With_Rakesh",
   "projectId": "9a7e7704-87a8-4d4c-94ae-df16d9f81e99",
-  "description": "Advanced Data Manipulation",
+  "description": "This is the UiADP Professional Course and Usecases",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.16.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[2.6.0-preview]",
     "UiPath.System.Activities": "[22.10.4]",
     "UiPath.UIAutomation.Activities": "[22.10.4]"
   },

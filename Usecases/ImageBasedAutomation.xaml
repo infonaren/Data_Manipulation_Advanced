@@ -1,0 +1,470 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ImageBasedAutomation" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,1370" sap2010:WorkflowViewState.IdRef="ImageBasedAutomation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.ObjectLibrary</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+      <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.Platform.Triggers.Scope</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.PDF</x:String>
+      <x:String>UiPath.PDF.Activities</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.PDF</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Abbyy OCR:&#xA;&#xA;1) Application ID&#xA;2) Password&#xA;3) API Link" DisplayName="ImageBasedAutomation" sap:VirtualizedContainerService.HintSize="548,1305" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:Image" Name="Image" />
+      <Variable x:TypeArguments="x:String" Name="strTessaract" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadPDFWithOCR Text="{x:Null}" DegreeOfParallelism="-1" DisplayName="Read PDF With OCR" FileName="Resources\Handwritten.pdf" sap:VirtualizedContainerService.HintSize="486,135" sap2010:WorkflowViewState.IdRef="ReadPDFWithOCR_1" ImageDpi="150" Range="All">
+      <ui:ReadPDFWithOCR.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <ui:GoogleOCR AllowedCharacters="{x:Null}" DeniedCharacters="{x:Null}" FilterRegion="{x:Null}" Invert="{x:Null}" Language="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Profile="{x:Null}" Scale="{x:Null}" ComputeSkewAngle="False" DisplayName="Tesseract OCR" ExtractWords="False" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Text="[strTessaract]" />
+        </ActivityFunc>
+      </ui:ReadPDFWithOCR.OCREngine>
+    </ui:ReadPDFWithOCR>
+    <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="Invoice.txt" sap:VirtualizedContainerService.HintSize="486,133" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[strTessaract]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Ended reading pdf&quot;]" />
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,242" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,163" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ApiKey="JTthYD0wbCRDwW1S3+XKRinVjUQtmlHSVSCUq9pK+kCXSWWAi2PlvDWx0HuoUIF2zAORE2qbXpuNKt7U1lo6Dw==" CvMethod="ElementDetection, OCR" DesignTimeCacheId="cf86f1e8-df2e-4686-98f3-ee6a0d490c20" DisplayName="CV Screen Scope 'Chrome_RenderWidgetHost...'" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Server="https://cv.uipath.com/" Version="V6">
+            <p:CVScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <p:CvTypeIntoWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DeselectAfter="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" Descriptor="[&quot;Target: Text 'Search the web' (309,47,110,15)&quot;]" DesignTimeCacheId="cf86f1e8-df2e-4686-98f3-ee6a0d490c20" DesignTimeScaleFactor="1" DisplayName="CV Type Into - Text" EmptyField="True" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvTypeIntoWithDescriptor_1" InformativeScreenshot="358d7ea8c6a23c5d2a933ee15a5b8e38" NumberOfScrolls="2" ScrollDirection="None" Text="[&quot;Naren Bagavathy&quot;]" Version="V6">
+                    <p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="fce4c579-60be-484e-9e3e-2306beb32107">
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="309, 47, 110, 15" ElementType="Text" Text="Search the web" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvTypeIntoWithDescriptor.DesignTimeDescriptor>
+                    <p:CvTypeIntoWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="71b39a54-b379-40e2-b46d-096a787b341c">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvTypeIntoWithDescriptor.Target>
+                  </p:CvTypeIntoWithDescriptor>
+                  <p:CvClickWithDescriptor DelayBefore="{x:Null}" DelayMS="{x:Null}" DelayScreenshotAfterScroll="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" Descriptor="[&quot;Target: Icon (1007,42,26,27)&quot;]" DesignTimeCacheId="cf86f1e8-df2e-4686-98f3-ee6a0d490c20" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,185" sap2010:WorkflowViewState.IdRef="CvClickWithDescriptor_1" InformativeScreenshot="beba9e7805082ec20a1556e6ab46a3d5" KeyModifiers="None" MouseButton="BTN_LEFT" NumberOfScrolls="2" ScrollDirection="None" Version="V6">
+                    <p:CvClickWithDescriptor.CursorPosition>
+                      <ui:CursorPosition Position="Center">
+                        <ui:CursorPosition.OffsetX>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetX>
+                        <ui:CursorPosition.OffsetY>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:CursorPosition.OffsetY>
+                      </ui:CursorPosition>
+                    </p:CvClickWithDescriptor.CursorPosition>
+                    <p:CvClickWithDescriptor.DesignTimeDescriptor>
+                      <uc:CvDescriptor Id="9bf606ef-6767-42b2-8838-b5b4d94f40e6">
+                        <uc:CvDescriptor.Target>
+                          <uc:CvElementDescriptor CellExtraInfo="{x:Null}" DesignTimeArea="1007, 42, 26, 27" ElementType="Icon" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABoAAAAbCAYAAABiFp9rAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFNSURBVEhL7ZRBSgMxFEB7E71BvYEeoTeoN1C8gIIuFVfdijuX7VJX6rKuCgMVpKUUCi5ERRfiQvj2hXzsOJnkW4ZxoQ8CMz8/eZmfZBpSE39YdDl6kavRq3/7OVFRN3uSjc6tNHb6ubZ6MJDTmwefZaNU1D4bu0lX9geyez5zUhrPxOhrndzJ89uHHxEnKFLJVnfqI3mYnD6VWSiI2IuYZBGV8aUpCqLmYeZKY4EvI3ftKPORcnIiBrJC9sEKuYyZPL77SJicSMtmKYVCLmMYG+N3RLWVDtY7Q3chLbAwcjlAKQqiZY53qmxQEIFe2O3e1K36O8ToI8f69UERqIyJ9i5m0ptvOo1nYvTpr2hznpuiVAScKPaMyRYbe6InUxeUkkVFCqViH2ihUlpkJpGFlKwyEagsdA8rFQFH/vj63r99UbmojH/R0tQkEvkELalqHuWoilYAAAAASUVORK5CYII=" />
+                        </uc:CvDescriptor.Target>
+                      </uc:CvDescriptor>
+                    </p:CvClickWithDescriptor.DesignTimeDescriptor>
+                    <p:CvClickWithDescriptor.Target>
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5f3d874a-8e2f-425c-82ec-4ad0fb3684bb">
+                        <ui:Target.TimeoutMS>
+                          <InArgument x:TypeArguments="x:Int32" />
+                        </ui:Target.TimeoutMS>
+                        <ui:Target.WaitForReady>
+                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                        </ui:Target.WaitForReady>
+                      </ui:Target>
+                    </p:CvClickWithDescriptor.Target>
+                  </p:CvClickWithDescriptor>
+                </Sequence>
+              </ActivityAction>
+            </p:CVScope.Body>
+            <p:CVScope.DesignTimeCache>
+              <uc:CVCache CvUiElements="{x:Null}" OcrTexts="{x:Null}" DataSent="False" />
+            </p:CVScope.DesignTimeCache>
+            <p:CVScope.DesignTimeCacheContainer>
+              <uc:CvCacheContainer>
+                <uc:CvCacheContainer.Caches>
+                  <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+                    <uc:CVCache DataSent="False" DisplayName="Screen CV Type Into - 'Search  (Main)" Id="cf86f1e8-df2e-4686-98f3-ee6a0d490c20" InformativeScreenshot="f6bc3bf45fc814619d9c965ef3d22099" LogicalPosition="0, 103" OcrText="5 Palayankottai 37°C Search the web Sign in My Feed News Gaming Play Videos Coronavirus Entertainment Money Weather Photos Personalize Content partially visible O Refresh stories This house is only 27 sq. ft. Showbizz Daily . 37m ago but when you see the inside Famous people who died in Al Jazeera . 22h ago you want it March 2023 Death and desperation in Pakistan's food queues 47 Ad Tips and Tricks 33 7 Trending Products for you &gt; See more 38% OFF CABIO 40% OFF FRI 27 21:58 87 BPM 0SCgge Feedback" Position="0, 103" ScreenshotGuid="e5d6c032-8f28-4317-9945-900b2efba3b2" ServerVersion="1">
+                      <uc:CVCache.CvAnchorRelations>
+                        <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                          <uc:AnchorRelationInfo IsTargetText="False" Target="68">
+                            <uc:AnchorRelationInfo.Anchors>
+                              <x:Array Type="x:Int32">
+                                <x:Int32>20</x:Int32>
+                                <x:Int32>21</x:Int32>
+                                <x:Int32>22</x:Int32>
+                              </x:Array>
+                            </uc:AnchorRelationInfo.Anchors>
+                          </uc:AnchorRelationInfo>
+                          <uc:AnchorRelationInfo IsTargetText="False" Target="9">
+                            <uc:AnchorRelationInfo.Anchors>
+                              <x:Array Type="x:Int32">
+                                <x:Int32>3</x:Int32>
+                                <x:Int32>4</x:Int32>
+                                <x:Int32>5</x:Int32>
+                              </x:Array>
+                            </uc:AnchorRelationInfo.Anchors>
+                          </uc:AnchorRelationInfo>
+                        </scg:List>
+                      </uc:CVCache.CvAnchorRelations>
+                      <uc:CVCache.CvUiElements>
+                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="128">
+                          <uc:CvElementInfo Category="Button" Region="695, 411, 26, 21" />
+                          <uc:CvElementInfo Category="Icon" Region="1098, 415, 19, 19" />
+                          <uc:CvElementInfo Category="Icon" Region="37, 40, 28, 29" />
+                          <uc:CvElementInfo Category="Icon" Region="176, 38, 32, 28" />
+                          <uc:CvElementInfo Category="Icon" Region="1284, 40, 25, 26" />
+                          <uc:CvElementInfo Category="Icon" Region="948, 123, 21, 22" />
+                          <uc:CvElementInfo Category="Icon" Region="1006, 305, 22, 20" />
+                          <uc:CvElementInfo Category="Icon" Region="1007, 42, 26, 27" />
+                          <uc:CvElementInfo Category="Button" Region="1140, 38, 87, 35" />
+                          <uc:CvElementInfo Category="InputBox" Region="290, 31, 766, 48" />
+                          <uc:CvElementInfo Category="Icon" Region="920, 42, 22, 26" />
+                          <uc:CvElementInfo Category="Icon" Region="61, 123, 22, 19" />
+                          <uc:CvElementInfo Category="Icon" Region="1008, 414, 17, 19" />
+                          <uc:CvElementInfo Category="ArrowButton" Region="1348, 645, 18, 18" />
+                          <uc:CvElementInfo Category="ArrowButton" Region="1348, 0, 18, 18" />
+                          <uc:CvElementInfo Category="Button" Region="935, 115, 127, 36" />
+                          <uc:CvElementInfo Category="Icon" Region="1056, 414, 18, 19" />
+                          <uc:CvElementInfo Category="Icon" Region="70, 350, 20, 20" />
+                          <uc:CvElementInfo Category="Icon" Region="960, 40, 28, 29" />
+                          <uc:CvElementInfo Category="Icon" Region="1257, 637, 19, 18" />
+                          <uc:CvElementInfo Category="Icon" Region="834, 123, 21, 16" />
+                          <uc:CvElementInfo Category="Icon" Region="1242, 35, 38, 32" />
+                          <uc:CvElementInfo Category="Button" Region="591, 173, 169, 35" />
+                          <uc:CvElementInfo Category="ArrowButton" Region="946, 409, 21, 22" />
+                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="536, 516, 16, 17" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="63, 539, 201, 124" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="945, 408, 22, 22" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="624, 181, 18, 18" />
+                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1001, 517, 15, 15" />
+                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="579, 582, 36, 34" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="579, 583, 34, 34" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1001, 517, 15, 15" />
+                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1242, 630, 103, 31" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="71, 413, 19, 19" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="536, 516, 16, 17" />
+                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="936, 115, 126, 36" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="535, 515, 17, 19" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1000, 516, 16, 17" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="74, 155, 44, 45" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="599, 620, 15, 14" />
+                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1066, 115, 229, 36" />
+                          <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="1001, 517, 15, 15" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="916, 196, 29, 34" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="351, 246, 24, 25" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1056, 414, 18, 20" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="695, 410, 27, 23" />
+                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="113, 131, 27, 24" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="334, 528, 152, 134" />
+                          <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="537, 517, 16, 17" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="801, 514, 131, 147" />
+                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1045, 278, 11, 12" />
+                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="533, 514, 75, 21" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="82, 158, 29, 28" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="340, 238, 43, 41" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="257, 396, 15, 14" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="626, 576, 14, 13" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="161, 414, 19, 17" />
+                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="990, 158, 129, 141" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="882, 643, 17, 14" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="882, 653, 17, 9" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="864, 653, 59, 5" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="860, 656, 68, 5" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="900, 643, 24, 15" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="808, 641, 121, 15" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="812, 654, 117, 6" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="451, 631, 38, 29" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="56, 412, 422, 29" />
+                          <uc:CvElementInfo Category="Cell" Confidence="Runtime" Region="874, 640, 47, 4" />
+                          <uc:CvElementInfo Category="InputBox" Region="1066, 116, 229, 35" />
+                          <uc:CvElementInfo Category="ArrowButton" Region="1263, 120, 22, 26" />
+                        </scg:List>
+                      </uc:CVCache.CvUiElements>
+                      <uc:CVCache.OcrTexts>
+                        <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="92">
+                          <uc:OcrTextInfo Region="1265, 41, 7, 10" Text="5" />
+                          <uc:OcrTextInfo Region="89, 46, 84, 17" Text="Palayankottai" />
+                          <uc:OcrTextInfo Region="204, 47, 29, 14" Text="37°C" />
+                          <uc:OcrTextInfo Region="309, 47, 49, 15" Text="Search" />
+                          <uc:OcrTextInfo Region="360, 47, 25, 15" Text="the" />
+                          <uc:OcrTextInfo Region="388, 47, 31, 15" Text="web" />
+                          <uc:OcrTextInfo Region="1165, 49, 25, 15" Text="Sign" />
+                          <uc:OcrTextInfo Region="1192, 49, 11, 12" Text="in" />
+                          <uc:OcrTextInfo Region="99, 125, 22, 16" Text="My" />
+                          <uc:OcrTextInfo Region="123, 125, 31, 13" Text="Feed" />
+                          <uc:OcrTextInfo Region="176, 125, 36, 13" Text="News" />
+                          <uc:OcrTextInfo Region="234, 125, 49, 16" Text="Gaming" />
+                          <uc:OcrTextInfo Region="306, 125, 28, 16" Text="Play" />
+                          <uc:OcrTextInfo Region="355, 125, 44, 13" Text="Videos" />
+                          <uc:OcrTextInfo Region="421, 125, 76, 13" Text="Coronavirus" />
+                          <uc:OcrTextInfo Region="519, 125, 90, 13" Text="Entertainment" />
+                          <uc:OcrTextInfo Region="631, 125, 44, 16" Text="Money" />
+                          <uc:OcrTextInfo Region="697, 125, 54, 13" Text="Weather" />
+                          <uc:OcrTextInfo Region="773, 125, 45, 13" Text="Photos" />
+                          <uc:OcrTextInfo Region="979, 126, 70, 13" Text="Personalize" />
+                          <uc:OcrTextInfo Region="1080, 126, 51, 13" Text="Content" />
+                          <uc:OcrTextInfo Region="1133, 126, 51, 16" Text="partially" />
+                          <uc:OcrTextInfo Region="1185, 126, 40, 13" Text="visible" />
+                          <uc:OcrTextInfo Region="624, 182, 16, 14" Text="O" />
+                          <uc:OcrTextInfo Region="642, 184, 41, 12" Text="Refresh" />
+                          <uc:OcrTextInfo Region="684, 185, 37, 11" Text="stories" />
+                          <uc:OcrTextInfo Region="695, 309, 39, 18" Text="This" />
+                          <uc:OcrTextInfo Region="738, 309, 56, 18" Text="house" />
+                          <uc:OcrTextInfo Region="798, 310, 15, 17" Text="is" />
+                          <uc:OcrTextInfo Region="817, 309, 41, 22" Text="only" />
+                          <uc:OcrTextInfo Region="862, 310, 23, 17" Text="27" />
+                          <uc:OcrTextInfo Region="889, 314, 27, 18" Text="sq." />
+                          <uc:OcrTextInfo Region="920, 309, 21, 18" Text="ft." />
+                          <uc:OcrTextInfo Region="1032, 309, 52, 12" Text="Showbizz" />
+                          <uc:OcrTextInfo Region="1085, 309, 28, 15" Text="Daily" />
+                          <uc:OcrTextInfo Region="1114, 310, 5, 11" Text="." />
+                          <uc:OcrTextInfo Region="1120, 309, 25, 12" Text="37m" />
+                          <uc:OcrTextInfo Region="1147, 312, 22, 12" Text="ago" />
+                          <uc:OcrTextInfo Region="696, 333, 33, 18" Text="but" />
+                          <uc:OcrTextInfo Region="732, 333, 50, 18" Text="when" />
+                          <uc:OcrTextInfo Region="785, 338, 37, 18" Text="you" />
+                          <uc:OcrTextInfo Region="826, 338, 31, 13" Text="see" />
+                          <uc:OcrTextInfo Region="861, 333, 32, 18" Text="the" />
+                          <uc:OcrTextInfo Region="896, 333, 55, 18" Text="inside" />
+                          <uc:OcrTextInfo Region="1008, 334, 72, 17" Text="Famous" />
+                          <uc:OcrTextInfo Region="1084, 333, 63, 23" Text="people" />
+                          <uc:OcrTextInfo Region="1151, 333, 40, 18" Text="who" />
+                          <uc:OcrTextInfo Region="1195, 333, 41, 18" Text="died" />
+                          <uc:OcrTextInfo Region="1241, 333, 18, 18" Text="in" />
+                          <uc:OcrTextInfo Region="95, 354, 13, 12" Text="Al" />
+                          <uc:OcrTextInfo Region="110, 354, 40, 12" Text="Jazeera" />
+                          <uc:OcrTextInfo Region="151, 357, 5, 8" Text="." />
+                          <uc:OcrTextInfo Region="157, 354, 22, 12" Text="22h" />
+                          <uc:OcrTextInfo Region="180, 356, 23, 12" Text="ago" />
+                          <uc:OcrTextInfo Region="695, 362, 36, 18" Text="you" />
+                          <uc:OcrTextInfo Region="735, 359, 46, 16" Text="want" />
+                          <uc:OcrTextInfo Region="785, 357, 15, 18" Text="it" />
+                          <uc:OcrTextInfo Region="1008, 357, 58, 18" Text="March" />
+                          <uc:OcrTextInfo Region="1071, 358, 44, 17" Text="2023" />
+                          <uc:OcrTextInfo Region="73, 380, 61, 19" Text="Death" />
+                          <uc:OcrTextInfo Region="138, 379, 38, 20" Text="and" />
+                          <uc:OcrTextInfo Region="182, 379, 119, 25" Text="desperation" />
+                          <uc:OcrTextInfo Region="305, 380, 21, 19" Text="in" />
+                          <uc:OcrTextInfo Region="330, 378, 99, 22" Text="Pakistan's" />
+                          <uc:OcrTextInfo Region="432, 379, 50, 20" Text="food" />
+                          <uc:OcrTextInfo Region="486, 384, 74, 20" Text="queues" />
+                          <uc:OcrTextInfo Region="91, 416, 16, 12" Text="47" />
+                          <uc:OcrTextInfo Region="700, 415, 16, 11" Text="Ad" />
+                          <uc:OcrTextInfo Region="725, 416, 24, 15" Text="Tips" />
+                          <uc:OcrTextInfo Region="750, 416, 21, 12" Text="and" />
+                          <uc:OcrTextInfo Region="773, 416, 31, 12" Text="Tricks" />
+                          <uc:OcrTextInfo Region="1028, 417, 14, 12" Text="33" />
+                          <uc:OcrTextInfo Region="1076, 417, 9, 12" Text="7" />
+                          <uc:OcrTextInfo Region="54, 461, 82, 23" Text="Trending" />
+                          <uc:OcrTextInfo Region="141, 461, 81, 18" Text="Products" />
+                          <uc:OcrTextInfo Region="225, 461, 30, 18" Text="for" />
+                          <uc:OcrTextInfo Region="257, 466, 36, 18" Text="you" />
+                          <uc:OcrTextInfo Region="294, 463, 10, 15" Text="&gt;" />
+                          <uc:OcrTextInfo Region="1233, 463, 24, 13" Text="See" />
+                          <uc:OcrTextInfo Region="1259, 466, 34, 10" Text="more" />
+                          <uc:OcrTextInfo Region="552, 519, 26, 12" Text="38%" />
+                          <uc:OcrTextInfo Region="579, 519, 24, 12" Text="OFF" />
+                          <uc:OcrTextInfo Region="818, 523, 30, 8" Text="CABIO" />
+                          <uc:OcrTextInfo Region="1016, 519, 26, 12" Text="40%" />
+                          <uc:OcrTextInfo Region="1043, 519, 24, 12" Text="OFF" />
+                          <uc:OcrTextInfo Region="641, 579, 14, 9" Text="FRI" />
+                          <uc:OcrTextInfo Region="665, 579, 12, 8" Text="27" />
+                          <uc:OcrTextInfo Region="618, 589, 60, 21" Text="21:58" />
+                          <uc:OcrTextInfo Region="585, 623, 12, 9" Text="87" />
+                          <uc:OcrTextInfo Region="661, 621, 21, 9" Text="BPM" />
+                          <uc:OcrTextInfo Region="815, 645, 103, 10" Text="0SCgge" />
+                          <uc:OcrTextInfo Region="1281, 641, 52, 12" Text="Feedback" />
+                        </scg:List>
+                      </uc:CVCache.OcrTexts>
+                    </uc:CVCache>
+                  </scg:List>
+                </uc:CvCacheContainer.Caches>
+              </uc:CvCacheContainer>
+            </p:CVScope.DesignTimeCacheContainer>
+            <p:CVScope.OCREngine>
+              <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                <ActivityFunc.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                </ActivityFunc.Argument>
+                <p1:UiPathScreenOCR Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="JTthYD0wbCRDwW1S3+XKRinVjUQtmlHSVSCUq9pK+kCXSWWAi2PlvDWx0HuoUIF2zAORE2qbXpuNKt7U1lo6Dw==" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" Timeout="100000" />
+              </ActivityFunc>
+            </p:CVScope.OCREngine>
+            <p:CVScope.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e056da9a-ebc8-4732-81dc-73a552765dcf" InformativeScreenshot="9734b551c3cf419573e9ccef8a1af967" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='New tab - Person 1 - Microsoft​ Edge' /&gt;&lt;wnd aaname='Horizontal' cls='Chrome_RenderWidgetHostHWND' title='Chrome Legacy Window' /&gt;" WaitForReady="INTERACTIVE">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+              </ui:Target>
+            </p:CVScope.Target>
+            <p:CVScope.UseLocalServer>
+              <InArgument x:TypeArguments="x:Boolean" />
+            </p:CVScope.UseLocalServer>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </p:CVScope>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,345" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,266" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'msedge.exe Naren'" sap:VirtualizedContainerService.HintSize="388,155" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+            <ui:ClickImage.CursorPosition>
+              <ui:CursorPosition Position="Center">
+                <ui:CursorPosition.OffsetX>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetX>
+                <ui:CursorPosition.OffsetY>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:CursorPosition.OffsetY>
+              </ui:CursorPosition>
+            </ui:ClickImage.CursorPosition>
+            <ui:ClickImage.Image>
+              <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" Profile="Basic" TargetImageBase64="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" />
+            </ui:ClickImage.Image>
+            <ui:ClickImage.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0c603f23-fcba-4f09-901d-a17b2e78581b" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='Naren Bagavathy - Search - Person 1 - Microsoft​ Edge' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:ClickImage.Target>
+          </ui:ClickImage>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

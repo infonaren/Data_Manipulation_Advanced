@@ -1,0 +1,191 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LINQ_SORTING" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,2224" sap2010:WorkflowViewState.IdRef="LINQ_SORTING_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Globalization</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Business Process Description:&#xA;&#xA;1. Open the website &quot;https://rpachallengeocr.azurewebsites.net/&quot;&#xA;&#xA;2. Scrape the Invoice Table Data.&#xA;&#xA;3. Sort the dates in ascending order using LINQ Query.&#xA;&#xA;( &#xA;From s In dt_ExtractInvoice &#xA;Order By DateTime.ParseExact(s.Item(&quot;Due Date&quot;).ToString, &quot;dd-MM-yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture) Ascending &#xA;Select s).CopyToDataTable&#xA;&#xA;4.  Write the invoice table into the excel sheet. &#xA;&#xA;&#xA;Breakdown of the query:&#xA;&#xA; From s In dt_ExtractInvoice  =&gt;  This clause specifies that we want to retrieve data from the dt_ExtractInvoice DataTable and assigns each row to the variable s.&#xA;&#xA;Order By DateTime.ParseExact(s.Item(&quot;Due Date&quot;).ToString, &quot;dd-MM-yyyy&quot;, System.Globalization.CultureInfo.InvariantCulture) Ascending =&gt;  This clause sorts the data in ascending order based on the value of the &quot;Due Date&quot; column&#xA;&#xA;The DateTime.ParseExact method is used to convert the value of the &quot;Due Date&quot; column to a DateTime object using the specified date format (&quot;dd-MM-yyyy&quot;). &#xA;&#xA;s.Item(&quot;Due Date&quot;) is retrieving the value of the &quot;Due Date&quot; column for the current DataRow object s. This value is then passed as an argument to the DateTime.ParseExact method, which converts the string value of the column to a DateTime object. The converted DateTime value is used for sorting the rows in the LINQ query.&#xD;&#xA;&#xD;&#xA;System.Globalization.CultureInfo.InvariantCulture is a special culture setting that represents a culture-independent format that does not depend on the user's culture settings. It provides a consistent and predictable way to handle date, time, and numeric data, regardless of the user's culture settings." DisplayName="LINQ_SORTING" sap:VirtualizedContainerService.HintSize="592,2159" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="https://rpachallengeocr.azurewebsites.net/" Name="str_InvoiceWebsiteUrl" />
+      <Variable x:TypeArguments="ui:Browser" Name="browser_InvoiceUrl" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Opens the target invoice website" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome:  - Invoice Website" sap:VirtualizedContainerService.HintSize="530,1481" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="e35cc812-86e7-404c-8b5d-bc9cbf55372d" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1207" sap2010:WorkflowViewState.IdRef="Sequence_5">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="dt_ExtractInvoice" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ExtractData DelayBetweenPagesMS="{x:Null}" sap2010:Annotation.AnnotationText="Description: &#xA;&#xA;Extracts the invoice table data." ContinueOnError="True" DataTable="[dt_ExtractInvoice]" DisplayName="Extract Invoice Table Data " ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='tr' /&gt;&lt;/row&gt;&lt;column exact='1' name='No' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Invoice ID' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='2' /&gt;&lt;/column&gt;&lt;column exact='1' name='Due Date' attr='fulltext'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Invoice URL' attr='href'&gt;&lt;webctrl tag='tr' /&gt;&lt;webctrl tag='td' idx='4' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="ExtractData_2" MaxNumberOfResults="100" NextLinkSelector="&lt;webctrl id='tableSandbox_next' tag='A' /&gt;" SimulateClick="True">
+              <ui:ExtractData.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="19ea959e-f41c-463f-972f-2cff49936e44" InformativeScreenshot="d28c4de752cf850a09189d3177ecab56" Selector="&lt;webctrl id='tableSandbox' tag='TABLE' /&gt;&lt;webctrl tag='TBODY' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:ExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExtractData>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Writes Invoice Data Into Excel before sorting the invoice dates" DataTable="[dt_ExtractInvoice]" DisplayName="Write Invoice Data Into Excel Before Sorting" sap:VirtualizedContainerService.HintSize="434,188" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="BeforeSortingDates" WorkbookPath="[Environment.CurrentDirectory+ &quot;/Output/&quot;+ &quot;Invoices.xlsx&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteRange>
+            <Assign DisplayName="Assign Sort Ascending Dates LINQ Query to dt_ExtractInvoice " sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[dt_ExtractInvoice]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable">[( From s In dt_ExtractInvoice Order By DateTime.ParseExact(s.Item("Due Date").ToString, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) Ascending Select s).CopyToDataTable]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Writes Invoice Data Into Excel after sorting the invoice dates in ascending order." DataTable="[dt_ExtractInvoice]" DisplayName="Write Invoice Data Into Excel After Sorting" sap:VirtualizedContainerService.HintSize="434,188" sap2010:WorkflowViewState.IdRef="WriteRange_5" SheetName="SortingDatesAscending" WorkbookPath="[Environment.CurrentDirectory+ &quot;/Output/&quot;+ &quot;Invoices.xlsx&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteRange>
+            <Assign DisplayName="Assign Sort Descending Dates LINQ Query to dt_ExtractInvoice " sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="sd:DataTable">[dt_ExtractInvoice]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="sd:DataTable" xml:space="preserve">[(From p In  dt_ExtractInvoice Order By DateTime.ParseExact( p.Item("Due Date").ToString, "dd-MM-yyyy", System.Globalization.CultureInfo.InvariantCulture) Descending Select p).CopyToDataTable]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Writes Invoice Data Into Excel after sorting the invoice dates in descending order." DataTable="[dt_ExtractInvoice]" DisplayName="Write Invoice Data Into Excel After Sorting" sap:VirtualizedContainerService.HintSize="434,188" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="SortingDatesDescending" WorkbookPath="[Environment.CurrentDirectory+ &quot;/Output/&quot;+ &quot;Invoices.xlsx&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteRange>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 784" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="095cb6b55662982f8bcb68afe4b2fb4e.jpg" Selector="&lt;html app='chrome.exe' title='Automation Challenge - OCR' /&gt;" Title="Automation Challenge - OCR" Url="[str_InvoiceWebsiteUrl]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

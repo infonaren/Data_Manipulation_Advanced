@@ -1,0 +1,226 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LINQ_JOIN_FUNCTION" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,3009" sap2010:WorkflowViewState.IdRef="LINQ_JOIN_FUNCTION_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="The join function helps us to merge different tables with each other. The merging works using a key.  This key can be only one column. But it can also be several columns. &#xA;&#xA;The join function has two parts. They are Inner and Outer Joins. &#xA;&#xA;Outer Joins has 3 parts: Left outer join, Right outer join, and Full outer join&#xA;&#xA;Example:  Suppose we have two sets. Set A and Set B consists of numbers&#xA;&#xA;A = {1,2,3,4}&#xA;&#xA;B = {3,4,5,6}&#xA;&#xA;An inner join will return the common numbers between two sets. &#xA;&#xA;Inner join output will {3,4} because {3,4} is common in both sets. &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Breakdown of the Inner Join LINQ Query:&#xD;&#xA;&#xD;&#xA;(&#xD;&#xA;From a In dt_Table1&#xD;&#xA;Join b In dt_Table2&#xD;&#xA;On a(&quot;CityID&quot;).ToString Equals b(&quot;CityID&quot;).ToString&#xD;&#xA;Select out_InnerJoinDT.Rows.Add( { a(&quot;CityID&quot;), a(&quot;CityName&quot;), b(&quot;ZIP&quot;) } )&#xD;&#xA;).CopyToDataTable&#xD;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;" DisplayName="LINQ_JOIN_FUNCTION" sap:VirtualizedContainerService.HintSize="558,2944" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="JOIN " sap:VirtualizedContainerService.HintSize="496,2311" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Name="dt_Table1" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dt_Table2" />
+        <Variable x:TypeArguments="x:String" Name="str_Table1" />
+        <Variable x:TypeArguments="x:String" Name="str_Table2" />
+        <Variable x:TypeArguments="sd:DataTable" Name="out_InnerJoinDT" />
+        <Variable x:TypeArguments="x:String" Name="str_InnerJoin" />
+        <Variable x:TypeArguments="sd:DataTable" Name="out_LeftJoinDT" />
+        <Variable x:TypeArguments="sd:DataTable" Name="out_RightJoinDT" />
+        <Variable x:TypeArguments="sd:DataTable" Name="out_FullJoinDT" />
+        <Variable x:TypeArguments="x:String" Name="str_LeftJoin" />
+        <Variable x:TypeArguments="x:String" Name="str_RightJoin" />
+        <Variable x:TypeArguments="x:String" Name="str_FullJoin" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Reads the table one data." DataTable="[dt_Table1]" DisplayName="Read Range Workbook - Table 1" sap:VirtualizedContainerService.HintSize="434,119" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Table1" WorkbookPath="LINQ_JOIN_EXCEL_FILES\Table1.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Writes the Datatable One to a string." DataTable="[dt_Table1]" DisplayName="Output Data Table - Table 1" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_Table1]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OutputDataTable>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Writes the Datatable One into the excel file." DataTable="[dt_Table1]" DisplayName="Write Range Workbook - Datatable One" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="TableOne" WorkbookPath="Join.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+      <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Writes the Datatable One  into the txt file." DisplayName="Write Text File - Table 1" FileName="Table1.txt" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_Table1]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteTextFile>
+      <ui:ReadRange Range="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Reads the table two data." DataTable="[dt_Table2]" DisplayName="Read Range Workbook - Table 2" sap:VirtualizedContainerService.HintSize="434,119" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Table2" WorkbookPath="LINQ_JOIN_EXCEL_FILES\Table2.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ReadRange>
+      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Writes the datatable two to a string." DataTable="[dt_Table2]" DisplayName="Output Data Table - Table 2" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="OutputDataTable_2" Text="[str_Table2]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OutputDataTable>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Writes the Datatable Two  into the excel file." DataTable="[dt_Table2]" DisplayName="Write Range Workbook - Datatable Two" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="TableTwo" WorkbookPath="Join.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+      <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Writes the Datatable two into the txt file." DisplayName="Write Text File - Table 2" FileName="Table2.txt" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[str_Table2]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteTextFile>
+      <ui:BuildDataTable sap2010:Annotation.AnnotationText="Creates a datatable that contains the CityID, City Name, and Zip code of the city" DataTable="[out_InnerJoinDT]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="434,102" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;ID&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Name&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;ZIP&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:BuildDataTable>
+      <Assign sap2010:Annotation.AnnotationText="Inner Join returns the common values or key from the both tables" DisplayName="Assign Inner Join Datatable" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+        <Assign.To>
+          <OutArgument x:TypeArguments="sd:DataTable">[out_InnerJoinDT]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="sd:DataTable" xml:space="preserve">[(
+From a In dt_Table1
+Join b In dt_Table2
+On a("CityID").ToString Equals b("CityID").ToString
+Select out_InnerJoinDT.Rows.Add( { a("CityID"), a("CityName"), b("ZIP") } )
+).CopyToDataTable]</InArgument>
+        </Assign.Value>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Assign>
+      <ui:OutputDataTable sap2010:Annotation.AnnotationText="Writes the inner join datatable to a string." DataTable="[out_InnerJoinDT]" DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="434,111" sap2010:WorkflowViewState.IdRef="OutputDataTable_3" Text="[str_InnerJoin]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:OutputDataTable>
+      <ui:WriteTextFile File="{x:Null}" sap2010:Annotation.AnnotationText="Writes the Datatable InnerJoin  into the txt file." DisplayName="Write Text File" FileName="InnerJoin.txt" sap:VirtualizedContainerService.HintSize="434,164" sap2010:WorkflowViewState.IdRef="WriteTextFile_3" Text="[str_InnerJoin]">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteTextFile>
+      <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Writes the Datatable InnerJoin  into the excel file." DataTable="[out_InnerJoinDT]" DisplayName="Write Range Workbook - Inner Join Datatable" sap:VirtualizedContainerService.HintSize="434,147" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="InnerJoin" WorkbookPath="Join.xlsx">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:WriteRange>
+    </Sequence>
+  </Sequence>
+</Activity>

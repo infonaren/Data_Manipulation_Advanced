@@ -1,0 +1,246 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="TAO_USECASE" this:TAO_USECASE.in_YahooSite="https://finance.yahoo.com/world-indices" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_YahooSite" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1240,2728</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>TAO_USECASE_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LINQ_MANIPULATION_USECASE" sap:VirtualizedContainerService.HintSize="643,2663" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_Yahoo" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredDataTable" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence sap2010:Annotation.AnnotationText="Business Process Description:&#xA;&#xA;Step 1: Open browser and launch https://finance.yahoo.com/world-indices Major World Indices - Yahoo Finance. See the complete list of world stock indexes with points and percentage change, volume, intraday highs and lows, 52 week range, and day &#xA;&#xA;Step 2: Extract the table from the webpage as an excel file&#xA;&#xA;Step 3: Consider the three columns such as Symbol, Name, and Change&#xA;&#xA;Step 4: Remove &quot;^&quot; from Symbol column&#xA;&#xA;Step 5: Remove &quot;.&quot; from Name column&#xD;&#xA;&#xA;Step 6: If the value in Change column is negative, then append &quot;(Negative)&quot; to the corresponding Name column value&#xA;&#xA;Step 7: Save the excel as &quot;youremail_FinYahoo_Day_Month_Year.xlsx&quot;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Breakdown of the LINQ Query:&#xD;&#xA;&#xD;&#xA;dt_YahooIndices.asenumerable.tolist.foreach(Sub(row) row(&quot;Symbol&quot;)= row(&quot;Symbol&quot;).tostring.replace(&quot;^&quot;,&quot;&quot;))&#xD;&#xA;&#xD;&#xA;Breaking down the query:&#xD;&#xA;&#xD;&#xA;&quot;.AsEnumerable()&quot;: This method is used to convert the DataTable object to an enumerable collection, which enables it to be used in LINQ queries.&#xD;&#xA;&#xD;&#xA;&quot;.ToList()&quot;: This method converts the enumerable collection to a list.&#xD;&#xA;&#xD;&#xA;&quot;.ForEach()&quot;: This method iterates through each element in the list and performs an action on each element.&#xD;&#xA;&#xD;&#xA;&quot;Sub(row)&quot;: This is the action that is performed on each row of the list. Sub() method is used to perform a specific action on a set of data without returning a result&#xD;&#xA;&#xD;&#xA;&quot;row(&quot;Symbol&quot;)= row(&quot;Symbol&quot;).ToString().Replace(&quot;^&quot;,&quot;&quot;)&quot;: This line of code replaces any occurrence of the &quot;^&quot; character in the &quot;Symbol&quot; column of the DataTable with an empty string. This essentially removes the &quot;^&quot; character from the symbol.&#xD;&#xA;&#xD;&#xA;dt_YahooIndices.AsEnumerable.Where(Function(row) row(&quot;Change&quot;).ToString.Contains(&quot;-&quot;)).ToList.ForEach(Sub(row) row(&quot;Change&quot;) = &quot;Negative&quot;)&#xD;&#xA;&#xD;&#xA;The query first calls the AsEnumerable method to convert the table to an IEnumerable collection.&#xD;&#xA;&#xD;&#xA;Next, the Where method is used to filter the collection to include only those rows where the value of the &quot;Change&quot; column contains a &quot;-&quot; character.&#xD;&#xA;&#xD;&#xA;The filtered collection is then converted to a list using the ToList method.&#xD;&#xA;&#xD;&#xA;Finally, the ForEach method is called on the list, which performs an action on each row that matches the filter criteria. The action being performed is a lambda expression that takes each matching row and sets the value of its &quot;Change&quot; column to the string &quot;Negative&quot;.&#xD;&#xA;&#xD;&#xA;In summary, this LINQ query updates the &quot;Change&quot; column of all rows in the dt_YahooIndices table where the value of the &quot;Change&quot; column contains a &quot;-&quot; character, setting the value to &quot;Negative&quot;.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;" DisplayName="YAHOO FINANCE " sap:VirtualizedContainerService.HintSize="581,2552" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="dt_Yahoo" />
+        <Variable x:TypeArguments="ui:Browser" Name="browser_Yahoo" />
+        <Variable x:TypeArguments="x:String" Name="str_Email" />
+        <Variable x:TypeArguments="s:DateTime" Name="currentDayTime" />
+        <Variable x:TypeArguments="sd:DataTable" Name="dt_YahooIndices" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application/Browser: Yahoo Finance Website" sap:VirtualizedContainerService.HintSize="519,1499" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="f28c6000-5ce5-4c8b-bd1e-b3a806c06941" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="485,1282" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_Day" />
+                <Variable x:TypeArguments="x:String" Name="str_Month" />
+                <Variable x:TypeArguments="x:String" Name="str_Year" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:MultipleAssign DisplayName="Multiple Assign - Email, Year, Date, Month, and Year" sap:VirtualizedContainerService.HintSize="423,225" sap2010:WorkflowViewState.IdRef="MultipleAssign_3">
+                <ui:MultipleAssign.AssignOperations>
+                  <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[str_Email]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">narenbagavathye5@gmail.com</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[str_Yahoo]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">_FinYahoo_</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[str_Day]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Now.ToString("dd")+"_"]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[str_Month]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Now.ToString("MM")+"_"]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                    <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                      <ui:AssignOperation.To>
+                        <OutArgument x:TypeArguments="x:String">[str_Year]</OutArgument>
+                      </ui:AssignOperation.To>
+                      <ui:AssignOperation.Value>
+                        <InArgument x:TypeArguments="x:String">[Now.ToString("yyyy")]</InArgument>
+                      </ui:AssignOperation.Value>
+                    </ui:AssignOperation>
+                  </scg:List>
+                </ui:MultipleAssign.AssignOperations>
+              </ui:MultipleAssign>
+              <uix:NExtractData sap2010:Annotation.AnnotationText="Extracts the stock prices table from the Yahoo Finance Website." AppendResults="False" ContinueOnError="True" DataTable="[dt_YahooIndices]" DisplayName="Extract Finanace Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Table'&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol' ReferenceIdx='0' Name='Symbol'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Symbol Url' ReferenceIdx='1' Name='Symbol Url'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Name' ReferenceIdx='2' Name='Name'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Last Price' ReferenceIdx='3' Name='Last Price'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Change' ReferenceIdx='4' Name='Change'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='% Change' ReferenceIdx='5' Name='% Change'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Volume' ReferenceIdx='6' Name='Volume'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Intraday High/Low' ReferenceIdx='7' Name='Intraday High/Low' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='52 Week Range' ReferenceIdx='8' Name='52 Week Range' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Day Chart' ReferenceIdx='9' Name='Day Chart' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Day Chart Url' ReferenceIdx='10' Name='Day Chart Url' IsDeleted='true'&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xD;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xD;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xD;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xD;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xD;&#xA;&#x9;&lt;/Column&gt;&#xD;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract-table get_columns_name='1' get_empty_columns='1' columns_name_source='Longest'&gt;&lt;column name='Symbol' attr='fulltext' name2='Symbol Url' attr2='href' /&gt;&lt;column name='Name' attr='fulltext' /&gt;&lt;column name='Last Price' attr='fulltext' /&gt;&lt;column name='Change' attr='fulltext' /&gt;&lt;column name='% Change' attr='fulltext' /&gt;&lt;column name='Volume' attr='fulltext' /&gt;&lt;column name='Intraday High/Low' attr='fulltext' /&gt;&lt;column name='52 Week Range' attr='fulltext' /&gt;&lt;column name='Day Chart' attr='fulltext' name2='Day Chart Url' attr2='href' /&gt;&lt;/extract-table&gt;" sap:VirtualizedContainerService.HintSize="423,199" sap2010:WorkflowViewState.IdRef="NExtractData_1" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="f28c6000-5ce5-4c8b-bd1e-b3a806c06941" Version="V3">
+                <uix:NExtractData.Target>
+                  <uix:TargetAnchorable DesignTimeRectangle="73, 373, 1237, 1177" DesignTimeScaleFactor="1" FriendlyName="'SymbolNameLast PriceCha…'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;" Guid="e0270c4a-d205-44be-8cff-45efef8cfd31" InformativeScreenshot="d9c82d284c1bcaeef01eff3d8d648705.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Major World Indices - Yahoo Finance' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                </uix:NExtractData.Target>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NExtractData>
+              <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Writes Finance data into Excel before manipulating the columns." DataTable="[dt_YahooIndices]" DisplayName="Write Finance Data Into Excel Before Manipulating" sap:VirtualizedContainerService.HintSize="423,188" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="BeforeManipulation" WorkbookPath="[str_Email+str_Yahoo+str_Day+str_Month+str_Year+&quot;.xlsx&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteRange>
+              <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Manipulates the three columns (Symbol, Name, and Change) data using LINQ Vb.Net Code." Code="dt_YahooIndices.asenumerable.tolist.foreach(Sub(row) row(&quot;Symbol&quot;)= row(&quot;Symbol&quot;).tostring.replace(&quot;^&quot;,&quot;&quot;))&#xA;dt_YahooIndices.asenumerable.tolist.foreach(Sub(row) row(&quot;Name&quot;)= row(&quot;Name&quot;).tostring.replace(&quot;.&quot;,&quot; &quot;))&#xA;dt_YahooIndices.AsEnumerable.Where(Function(row) row(&quot;Change&quot;).ToString.Contains(&quot;-&quot;)).ToList.ForEach(Sub(row) row(&quot;Change&quot;) = &quot;Negative&quot;)" DisplayName="Invoke LINQ Vb.Net Code synchronously" sap:VirtualizedContainerService.HintSize="423,207" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+                <ui:InvokeCode.Arguments>
+                  <InArgument x:TypeArguments="sd:DataTable" x:Key="dt_YahooIndices">[dt_YahooIndices]</InArgument>
+                </ui:InvokeCode.Arguments>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:InvokeCode>
+              <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" sap2010:Annotation.AnnotationText="Description:&#xA;&#xA;Writes Finance data into Excel after manipulating the columns." DataTable="[dt_YahooIndices]" DisplayName="Write Finance Data Into Excel After Manipulating" sap:VirtualizedContainerService.HintSize="423,188" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="AfterManipulation" WorkbookPath="[str_Email+str_Yahoo+str_Day+str_Month+str_Year+&quot;.xlsx&quot;]">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:WriteRange>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJdSURBVFhHY0hgvPR/IPGoA0YdMHwdUKN36/+TK99R8Lq6FxjqaOaAY0ve/UcHzZZ3MNTRxAEF0tf+//71D2otBDw49w2rWpo4YEvHK6i1CDAz5hFWtVR3QBr35f9f3v2BWgsB757++p/Mil09VgfcPvYFqhUCDs55i6FmfcMLqCwE3DnxFSy+OOcpVAQBVlU8x9APw1gdMCXkAVQrBPz4+vd/psAVuHwSyyWwr5DBtIiH/xOZLv1/cfsHVAQCfnz5+z9L8CqK+cgYqwMSmS/9f33/J9QICFia/xQuj+7Ad09+gR01MQBVHAT2THmDYjY6xpkGlhagBuWz69/hctf2fYaKQsDqSkgQ3ziEGnV///77X6ZyA64PG8bpgAzeK/+/fURNTB2Od/9Xat6E8iDg57e//7OFr/5P5bwMDn5kfGAWZtpBxzgdAMLbe1Cz06nVH/7vnvQayoMAZEtAjk5hv4xiBiGM1wFFctf///mNKFBA7G+fUEOlSvvm/xyRq/8v7fj0/9+/f2A1IEdiMw8bxusAED6x4j3UKkxwedcnsJojCzGL3emRDzHMwoYJOqDR7DbUSEzQ530frObJ1e9QEQTY2IRZ8WDDBB0AwreOoKZuEHh+8wdcfs/UN1BRCABFRYs1ZsWDDRPlgMlBmPl7UfYTuDyo+N077c3/Nw9//n94/hu4UELWjw8T5YB+n/tQayHg64c//9N5ECUjJZgoB6AXPKDsiU0dOZigA2oNbkGthYC/f/79L1a4jlUtOZigA44uQs1ip9d+wKqOXExUFNASjzpg1AED7IBL/wEEb/bMxqNS/AAAAABJRU5ErkJggg==" InformativeScreenshot="e5e31f299bdcf1da07b462d2aed62178.jpg" Selector="&lt;html app='chrome.exe' title='Major World Indices - Yahoo Finance' /&gt;" Title="Major World Indices - Yahoo Finance" Url="[in_YahooSite]" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>
